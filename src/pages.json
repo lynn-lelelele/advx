@@ -1,0 +1,54 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "Echo"
+			}
+		},
+		{
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "pages/profile/profile",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Echo",
+		"navigationBarBackgroundColor": "#FFFAF5",
+		"backgroundColor": "#FEF8F2"
+	},
+	"tabBar": {
+		"color": "#c4a89a",
+		"selectedColor": "#e8875b",
+		"backgroundColor": "#fffaf6",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/tabbar/home.svg",
+				"selectedIconPath": "static/tabbar/home-active.svg"
+			},
+			{
+				"pagePath": "pages/message/message",
+				"text": "消息",
+				"iconPath": "static/tabbar/message.svg",
+				"selectedIconPath": "static/tabbar/message-active.svg"
+			},
+			{
+				"pagePath": "pages/profile/profile",
+				"text": "我的",
+				"iconPath": "static/tabbar/profile.svg",
+				"selectedIconPath": "static/tabbar/profile-active.svg"
+			}
+		]
+	}
+}
