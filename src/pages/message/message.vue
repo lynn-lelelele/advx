@@ -3,7 +3,7 @@
     <!-- 搜索栏 -->
     <view class="search-bar">
       <text class="search-icon">🔍</text>
-      <text class="search-placeholder">搜索消息</text>
+      <text class="search-placeholder">搜索共鸣</text>
     </view>
 
     <!-- 消息列表 -->
@@ -19,12 +19,6 @@
           </view>
           <text class="message-preview">{{ msg.preview }}</text>
         </view>
-      </view>
-
-      <view class="empty-state" v-if="messages.length === 0">
-        <text class="empty-icon">💭</text>
-        <text class="empty-text">还没有消息</text>
-        <text class="empty-hint">快来开始第一次对话吧</text>
       </view>
     </view>
   </view>
@@ -42,10 +36,10 @@ interface Message {
 const messages = ref<Message[]>([])
 </script>
 
-<style>
+<style scoped>
 .container {
   min-height: 100vh;
-  background: #f5f5f5;
+  background: linear-gradient(165deg, #0a0c16 0%, #121424 50%, #181930 100%);
 }
 
 .search-bar {
@@ -53,7 +47,8 @@ const messages = ref<Message[]>([])
   align-items: center;
   margin: 20rpx 30rpx;
   padding: 20rpx 30rpx;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 50rpx;
 }
 
@@ -64,7 +59,7 @@ const messages = ref<Message[]>([])
 
 .search-placeholder {
   font-size: 28rpx;
-  color: #999;
+  color: #64748b;
 }
 
 .message-list {
@@ -75,7 +70,7 @@ const messages = ref<Message[]>([])
   display: flex;
   align-items: center;
   padding: 24rpx 0;
-  border-bottom: 1rpx solid #f0f0f0;
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.05);
 }
 
 .message-item:last-child {
@@ -86,7 +81,7 @@ const messages = ref<Message[]>([])
   width: 88rpx;
   height: 88rpx;
   border-radius: 50%;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #fb923c, #f6d365);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,17 +110,17 @@ const messages = ref<Message[]>([])
 .message-name {
   font-size: 28rpx;
   font-weight: 500;
-  color: #333;
+  color: #cbd5e1;
 }
 
 .message-time {
   font-size: 22rpx;
-  color: #999;
+  color: #64748b;
 }
 
 .message-preview {
   font-size: 24rpx;
-  color: #666;
+  color: #64748b;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -145,12 +140,12 @@ const messages = ref<Message[]>([])
 
 .empty-text {
   font-size: 32rpx;
-  color: #333;
+  color: #cbd5e1;
   margin-bottom: 12rpx;
 }
 
 .empty-hint {
   font-size: 26rpx;
-  color: #999;
+  color: #64748b;
 }
 </style>
